@@ -11,7 +11,7 @@ Your sweet REST client based on superagent.
     client.on('error', function(error) {
       // handle error in application or view
     });
-    client.on('find', function(models) {
+    client.on('find', function(ok, body) {
       // render models in view
     });
     // will do a GET /products?filter[name]=Bag
