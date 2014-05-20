@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 PATH  := node_modules/.bin:$(PATH)
 
-test: build
+test:
 	@mocha --reporter spec
 
 build:
@@ -11,4 +11,4 @@ build:
 clean:
 	@rm -rf build components node_modules
 
-.PHONY: build clean
+.PHONY: test build clean

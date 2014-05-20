@@ -31,7 +31,9 @@ Preferable with [component](https://github.com/component/component)
 
     $ component install bodokaiser/component-rester
 
-*npm, browserify support would be not to hard to achieve - patches welcome.*
+or with [npm](https://github.com/npm/npm)
+
+    $ npm install --save bodokaiser-rester
 
 ## Documentation
 
