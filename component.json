@@ -24,12 +24,6 @@
     "lib/rester/index.js"
   ],
 
-  "development": {
-    "dependencies": {
-      "component/assert": "*"
-    }
-  },
-
   "dependencies": {
     "component/emitter": "^1.1.2",
     "visionmedia/superagent": "^0.18.0"

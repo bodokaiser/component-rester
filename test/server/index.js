@@ -5,9 +5,16 @@ var app = express();
 app.products = require('./products');
 
 app.post('/products', function(req, res) {
-  app.products.push(res.body);
+  var body = '';
 
-  res.json(200);
+  req.on('readable', function() {
+    body += req.read().toString();
+  });
+  req.on('end', function() {
+    app.products.push(JSON.parse(body));
+
+    res.json(200);
+  });
 });
 
 app.get('/products', function(req, res) {
@@ -16,7 +23,7 @@ app.get('/products', function(req, res) {
 
 app.get('/products/:product', function(req, res) {
   var result = app.products.filter(function(product) {
-    return product.id === req.params.product;
+    return product.id == req.params.product;
   }).pop();
 
   res.json(result);
@@ -24,7 +31,7 @@ app.get('/products/:product', function(req, res) {
 
 app.put('/products/:product', function(req, res) {
   var result = app.products.filter(function(product) {
-    return product.id === req.params.product;
+    return product.id == req.params.product;
   }).pop();
 
   for (var key in req.body) {
@@ -36,11 +43,11 @@ app.put('/products/:product', function(req, res) {
 
 app.del('/products/:product', function(req, res) {
   var result = app.products.filter(function(product) {
-    return product.id === req.params.product;
+    return product.id == req.params.product;
   }).pop();
 
   app.products.splice(app.products.indexOf(result), 1);
-  
+
   res.json(200)
 });
 
