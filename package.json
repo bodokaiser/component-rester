@@ -1,0 +1,43 @@
+{
+
+  "name": "bodokaiser-rester",
+
+  "author": "Bodo Kaiser <i@bodokaiser.io>",
+
+  "license": "MIT",
+
+  "version": "0.0.0",
+
+  "keywords": [
+    "http",
+    "rest",
+    "client",
+    "component"
+  ],
+
+  "description": "Your sweet REST client based on superagent.",
+
+  "main": "lib/index.js",
+
+  "scripts": {
+    "build": "make build"
+  },
+
+  "dependencies": {
+    "superagent": "^0.18.0"
+  },
+
+  "devDependencies": {
+    "component": "^1.0.0",
+    "mocha": "^1.19.0"
+  },
+
+  "repository": {
+    "url": "git://github.com/bodokaiser/component-rester.git"
+  },
+
+  "bugs": {
+    "url": "https://github.com/bodokaiser/component-rester/issues"
+  }
+
+}

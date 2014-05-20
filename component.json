@@ -1,0 +1,38 @@
+{
+
+  "name": "rester",
+
+  "version": "0.0.0",
+
+  "license": "MIT",
+
+  "keywords": [
+    "http",
+    "rest",
+    "client",
+    "component"
+  ],
+
+  "repository": "bodokaiser/component-rester",
+
+  "description": "Your sweet REST client based on superagent.",
+
+  "main": "lib/index.js",
+
+  "scripts": [
+    "lib/index.js",
+    "lib/rester/index.js"
+  ],
+
+  "development": {
+    "dependencies": {
+      "component/assert": "*"
+    }
+  },
+
+  "dependencies": {
+    "component/emitter": "^1.1.2",
+    "visionmedia/superagent": "^0.18.0"
+  }
+
+}
