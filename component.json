@@ -2,9 +2,11 @@
 
   "name": "rester",
 
-  "version": "0.0.4",
+  "author": "Bodo Kaiser <i@bodokaiser.io>",
 
   "license": "MIT",
+
+  "version": "1.0.0",
 
   "keywords": [
     "http",
